@@ -1,6 +1,31 @@
-app:
-  name: iris-dash
-  description: example iris dashboard copied from dash-bootstrap-components examples
-  owner: rcredburn@gmail.com
-  maintainers:
-    - rcredburn@gmail.com
+name: iris-dash
+title: Iris K-Means Clustering
+description: Interactive dashboard for k-means clustering analysis of the Iris dataset with configurable parameters
+admins:
+  - rredburn@us.ibm.com
+  - rcredburn@gmail.com
+
+access_control:
+  mode: open
+  allowed_users: []
+  allowed_groups: []
+
+redis_mode: shared
+
+health_check:
+  path: /dash/iris/
+  method: GET
+  timeout: 10
+  expected_status: 200
+  interval: 60
+
+resources:
+  memory_limit: 512M
+  cpu_limit: 1.0
+  workers: 4
+
+storage:
+  enabled: false
+  mount_path: /app/data
+
+assets_path: /assets
