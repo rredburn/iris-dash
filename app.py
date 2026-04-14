@@ -15,7 +15,10 @@ from sklearn.cluster import KMeans
 iris_raw = datasets.load_iris()
 iris = pd.DataFrame(iris_raw["data"], columns=iris_raw["feature_names"])
 
-app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(
+    external_stylesheets=[dbc.themes.BOOTSTRAP],
+    requests_pathname_prefix='/dash/iris/'
+)
 
 controls = dbc.Card(
     [
