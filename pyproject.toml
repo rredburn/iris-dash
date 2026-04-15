@@ -7,6 +7,7 @@ requires-python = ">=3.11"
 dependencies = [
     "dash",
     "dash-bootstrap-components",
+    "gunicorn",
     "pandas>=2.1.2",
     "plotly",
     "scikit-learn",
