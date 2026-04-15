@@ -17,7 +17,7 @@ iris = pd.DataFrame(iris_raw["data"], columns=iris_raw["feature_names"])
 
 app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP],
-    requests_pathname_prefix='/dash/iris/'
+    requests_pathname_prefix='/dash/iris-dash/'
 )
 
 controls = dbc.Card(
