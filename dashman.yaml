@@ -20,7 +20,7 @@ health_check:
   interval: 60
 
 resources:
-  memory_limit: 512M
+  memory_limit: 1G
   cpu_limit: 1.0
   workers: 4
 
